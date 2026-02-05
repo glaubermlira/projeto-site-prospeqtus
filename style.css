@@ -1080,3 +1080,41 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ===== PDF / PRINT MODE ===== */
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .navbar,
+    .nav-whatsapp {
+        display: none !important;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .product-card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .footer {
+        page-break-before: avoid;
+    }
+}
+ 
